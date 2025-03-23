@@ -5,9 +5,10 @@ import cors from 'cors'
 const router = express.Router();
 
 
+const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:3000';
 router.use(cors({
     credentials: true,
-    origin: "http://localhost:3000"
+    origin: frontendUrl
 }))
 
 
